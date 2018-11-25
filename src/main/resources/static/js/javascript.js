@@ -27,8 +27,3 @@ function Numero(e) {
         }
     }
 }
-
-module.exports = {
-  mascara, Numero
-
-}
