@@ -49,7 +49,7 @@
 
             <img class="img-fluid" width="700px" height="300px" src="img/osf.png">
             <hr>
-          
+
             <p class="lead text-muted"><strong> APAIXONADOS. DETERMINADOS.
                     Estes são apenas alguns dos adjetivos utilizados pelos nossos clientes ao descrever a OSF Global
                     Services.
@@ -64,15 +64,14 @@
 
     <section class=>
         <div class="col-md-4"></div>
-        
+
         <div class="col-lg-8 order-md-1 text">
-            <h4 class="mb-3">Insira seus dados para cadastro</h4>
-            <form action="/cadastrarContato" method="POST" novalidate>
+            <h4 class="mb-3">Insira os dados sobre a conta</h4>
+            <form action="/cadastrarConta" method="POST" novalidate>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name"
-                         value="" placeholder="Digite seu nome"
+                        <label for="name">Nome da conta</label>
+                        <input type="text" class="form-control" id="name" name="name" value="" placeholder="Digite o nome da conta"
                             required>
                         <div class="invalid-feedback">
                             É necessário um nome válido.
@@ -82,54 +81,46 @@
                 </div>
 
                 <div class="mb-3 col-md-6">
-                    <label for="email">Email</label>
+                    <label for="email">Código de barras</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
-                        <input type="text" class="form-control" id="email" name="email"
-                        value="" placeholder="seuemail@exemplo.com" required>
+                        <input type="text" class="form-control" id="email" name="email" value="" placeholder="00190000090308493220506220096173877490000010000">
                         <div class="invalid-feedback" style="width: 100%;">
-                            Adicione por favor um endereço de email válido para o envio de informações úteis.
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="state">Gênero</label>
-                        <select name="gender" id="gender" class="custom-select d-block w-100" required>
-                            <option value="">Gênero...</option>
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Selecione um estado válido
+                            Adicione o código de barras se sua conta tiver um.
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-3 col-md-6">
-                    <label for="username">Telefone para contato</label>
+                    <label for="username">Valor da conta</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">TEL</span>
+                            <span class="input-group-text">R$</span>
                         </div>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="88 8888-8888"
-                            required onkeypress="mascara(this, '## #####-####'); 
-                            return Numero(event);" maxlength="13"  value="">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="R$150,00" required>
 
                         <div class="invalid-feedback" style="width: 100%;">
-                            Seu telefone deve ser preenchido
+                            Digite o valor da conta
                         </div>
                     </div>
                 </div>
 
-        </div>
-        <hr class="mb-4">
-        <button class="btn btn-primary btn-lg col-lg-4" type="submit">Cadastrar</button>
-        </form>
+                <div class="col-md-6 mb-3">
+                    <label for="pessoa">Data de Vencimento:</label>
+                    <input type="text" class="form-control" id="dataVencimento" onkeypress="mascara(this, '##/##/####'); return Numero(event);"
+                        placeholder="11/12/2018" maxlength="10" th:field="*{dataVencimento}">
+                    <div class="invalid-feedback">
+                        É necessário um nome válido.
+                    </div>
+                </div>
+
+
+               
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg col-lg-4" type="submit">Cadastrar</button>
+            </form>
         </div>
         </div>
     </section>
