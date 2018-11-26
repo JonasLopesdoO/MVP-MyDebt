@@ -2,10 +2,15 @@ package com.ufc.br.mvp.bean;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Conta {
@@ -15,8 +20,14 @@ public class Conta {
 	private int id;
 	private String descricao;
 	private double valor;
+	@OneToOne(mappedBy="conta", cascade = CascadeType.ALL, 
+					fetch = FetchType.LAZY, optional = false)
 	private Boleto boleto;
+	@ManyToOne
+	@JoinColumn(name = "usuario_id")
 	private Usuario usuario;
+	@ManyToOne
+	@JoinColumn(name = "recebedor_id")
 	private Recebedor recebedor;
 	private LocalDate vencimento;
 	private LocalDate pagamento;

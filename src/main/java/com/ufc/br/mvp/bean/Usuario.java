@@ -1,12 +1,16 @@
 package com.ufc.br.mvp.bean;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -20,6 +24,8 @@ public class Usuario {
 	private LocalDate nascimento;
 	private String email;
 	private String senha;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+	private List<Conta> contas;
 	
 	public Usuario() {}
 	
@@ -30,6 +36,7 @@ public class Usuario {
 		this.nascimento = nascimento;
 		this.email = email;
 		this.senha = senha;
+		this.contas = new ArrayList<Conta>();
 	}
 	
 	public int getId() {
@@ -69,6 +76,12 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	
+	public List<Conta> getContas() {
+		return contas;
+	}
+
+	public void setContas(List<Conta> contas) {
+		this.contas = contas;
+	}
 	
 }

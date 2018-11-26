@@ -1,10 +1,15 @@
 package com.ufc.br.mvp.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Recebedor {
@@ -16,6 +21,8 @@ public class Recebedor {
 	private String nome;
 	private String descricao;
 	private String endereco;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "recebedor")
+	private List<Conta> contas;
 	
 	public Recebedor() {}
 	
@@ -23,6 +30,7 @@ public class Recebedor {
 		this.nome = nome;
 		this.descricao = descricao;
 		this.endereco = endereco;
+		this.contas = new ArrayList<Conta>();
 	}
 	
 	public int getId() {
@@ -48,6 +56,14 @@ public class Recebedor {
 	}
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
+	}
+	
+	public List<Conta> getContas() {
+		return contas;
+	}
+
+	public void setContas(List<Conta> contas) {
+		this.contas = contas;
 	}
 }
 

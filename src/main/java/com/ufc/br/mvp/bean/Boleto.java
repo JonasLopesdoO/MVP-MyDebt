@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Boleto {
@@ -12,6 +14,9 @@ public class Boleto {
 	private int id;
 	
 	private String codigo;
+	@OneToOne
+	@JoinColumn(name="conta_id")
+	private Conta conta;
 	
 	public Boleto() {}
 	
@@ -33,5 +38,13 @@ public class Boleto {
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
+	}
+	
+	public Conta getConta() {
+		return conta;
+	}
+
+	public void setConta(Conta conta) {
+		this.conta = conta;
 	}
 }
