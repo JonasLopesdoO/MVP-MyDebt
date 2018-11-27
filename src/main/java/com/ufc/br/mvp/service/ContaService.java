@@ -1,7 +1,5 @@
 package com.ufc.br.mvp.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +12,19 @@ public class ContaService {
 	@Autowired
 	private ContaRepository repository;
 	
-	public List<Conta> getMyContas(){
-		return repository.findAll();
+	public Conta save(Conta conta) {
+		return repository.save(conta);
+	}
+	
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		} catch (IllegalArgumentException e) {
+			// Caso conta nula
+		}
+	}
+	
+	public Conta find(Long id) {
+		return repository.getOne(id);
 	}
 }

@@ -17,7 +17,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="usuario_id")
-	private int id;
+	private Long id;
 	
 	private String nome;
 	private String sobrenome;
@@ -39,10 +39,10 @@ public class Usuario {
 		this.contas = new ArrayList<Conta>();
 	}
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {

@@ -12,7 +12,7 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioRepository repository;
 	
-	public Usuario find(int id) {
+	public Usuario find(Long id) {
 		return repository.getOne(id);
 	}
 }

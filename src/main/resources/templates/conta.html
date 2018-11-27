@@ -1,0 +1,45 @@
+<html xmlns:th="http//thymeleaf.org"
+	  xmlns:layout="http//www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Nova Conta</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+	
+	<h2>Cadastro</h2>
+	
+	<div class="container">
+		<div class="row">
+	    	<form class="col s12" method="post" action="/conta/salvar" enctype="multipart/form-data" th:object="${conta}">
+	      		<input type="hidden" th:field="*{id}">
+	      		<div class="row">
+	        		<div class="input-field col s12">
+	          			<input id="descricao" type="text" class="text" th:field="*{descricao}">
+	          			<label for="descricao">Descricao</label>
+	        		</div>
+	      		</div>
+	      		<div class="row">
+	        		<div class="input-field col s4">
+	          			<input placeholder="Placeholder" id="valor" type="number" class="validate" th:field="*{valor}">
+	          			<label for="valor">Valor</label>
+	        		</div>
+	        		<div class="input-field col s4">
+	          			<input id="vencimento" type="date" class="validate" th:field="*{vencimento}">
+	          			<label for="vencimento">Vencimento</label>
+	        		</div>
+	        		<div class="input-field col s4">
+	          			<input id="pagamento" type="date" class="validate" th:field="*{pagamento}">
+	          			<label for="pagamento">Pagamento</label>
+	        		</div>
+	      		</div>
+	      		
+	      		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    				<i class="material-icons right">send</i>
+  				</button>
+	        </form>
+		</div>
+	</div>
+  	<script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+</html>

@@ -17,7 +17,7 @@ public class Conta {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String descricao;
 	private double valor;
 	@OneToOne(mappedBy="conta", cascade = CascadeType.ALL, 
@@ -45,10 +45,10 @@ public class Conta {
 		this.pagamento = pagamento;
 	}
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getDescricao() {

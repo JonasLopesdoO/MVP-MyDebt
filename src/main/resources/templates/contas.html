@@ -29,7 +29,33 @@
 	     	</ul>
 	   	</div>
 	</nav>
+	<div class="container">
+		<h2>Lista de Contas</h2>
+		<h3><a href="/conta/formulario" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Conta</a></h3>
+	</div>
 	
+	
+	<table class="container">
+		<thead>
+			<tr class="row">
+				<th>Valor</th>
+				<th>Vencimento</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="conta : ${contas}" class="row">
+				
+				<td th:text="${conta.valor}"></td>
+				<td th:text="${conta.vencimento}"></td>
+				<td><a class="waves-effect waves-light btn-small" th:href="@{/conta/atualizar/{id}(id = $conta.id})}">Atualizar</a> </td>
+				<td><a class="waves-effect waves-light btn-small" th:href="@{/conta/excluir/{id}(id = ${conta.id})}"><i class="material-icons left">delete</i></a></td>
+			
+			</tr>
+		</tbody>
+	</table>
+
+
+
 <!--JavaScript at end of body for optimized loading-->
      <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
      <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>

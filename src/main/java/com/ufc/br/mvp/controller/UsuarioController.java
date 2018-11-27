@@ -7,13 +7,14 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ufc.br.mvp.bean.Usuario;
 
 @Controller
+@RequestMapping("/usuario")
 public class UsuarioController {
 	
 	
-	@RequestMapping("/lista-contas")
+	@RequestMapping("/contas")
 	public ModelAndView getMyContas(Usuario user) {
 		//Pegar o usuario da sessão
-		ModelAndView mv = new ModelAndView("lista-contas");
+		ModelAndView mv = new ModelAndView("contas");
 		mv.addObject("salas", user.getContas());
 		return mv;
 	}
