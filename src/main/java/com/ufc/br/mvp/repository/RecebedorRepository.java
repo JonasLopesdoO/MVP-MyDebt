@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ufc.br.mvp.bean.Recebedor;
 
 @Repository
-public interface RecebedorRepository extends JpaRepository<Recebedor, Integer>{
+public interface RecebedorRepository extends JpaRepository<Recebedor, Long>{
 
 }

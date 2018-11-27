@@ -16,7 +16,7 @@ public class Recebedor {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="recebedor_id")
-	private int id;
+	private Long id;
 	
 	private String nome;
 	private String descricao;
@@ -30,13 +30,13 @@ public class Recebedor {
 		this.nome = nome;
 		this.descricao = descricao;
 		this.endereco = endereco;
-		this.contas = new ArrayList<Conta>();
+		this.contas = new ArrayList<>();
 	}
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNome() {
