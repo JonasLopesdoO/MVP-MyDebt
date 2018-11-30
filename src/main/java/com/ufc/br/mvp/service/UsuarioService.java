@@ -12,6 +12,10 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioRepository repository;
 	
+	public Usuario save(Usuario usuario) {
+		return repository.save(usuario);
+	}
+	
 	public Usuario find(Long id) {
 		return repository.getOne(id);
 	}

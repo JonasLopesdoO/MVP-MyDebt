@@ -18,20 +18,17 @@
 	          			<label for="nome">Nome</label>
 	        		</div>
 	        		<div class="input-field col s4">
-	          			<input id="cpf" type="text" class="validate" th:field="*{cpf}">
-	          			<label for="cpf">CPF</label>
+	          			<input id="sobrenome" type="text" class="validate" th:field="*{sobrenome}">
+	          			<label for="sobrenome">Sobrenome</label>
 	        		</div>
 	      		</div>
 	      		<div class="row">
-	        		<div class="input-field col s8">
-	          			<input id="endereco" type="text" class="validate" th:field="*{endereco}">
-	          			<label for="endereco">Endereco</label>
-	        		</div>
 	        		<div class="input-field col s4">
-	          			<input id="dataNascimento" type="text" class="validate" th:field="*{dataNascimento}">
-	          			<label for="dataNascimento">Data de Nascimento</label>
+	          			<input id="nascimento" type="date" class="validate" th:field="*{nascimento}">
+	          			<label for="nascimento">Data de Nascimento</label>
 	        		</div>
 	      		</div>
+	      		<!-- Em desenvolvimento!...
 	      		<div class="row">
 	        		<div class="input-field col s6">
 	          			<input id="login" type="text" class="validate" th:field="*{login}">
@@ -42,6 +39,7 @@
 	          			<label for="senha">Password</label>
 	        		</div>
 	      		</div>
+	      		 -->
 	      		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
     				<i class="material-icons right">send</i>
   				</button>

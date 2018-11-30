@@ -30,7 +30,7 @@ public class RecebedorController {
 	@PostMapping("/salvar")
 	public ModelAndView salvar(Recebedor recebedor) {
 		service.save(recebedor);
-		ModelAndView mv = new ModelAndView("recebedores");
+		ModelAndView mv = new ModelAndView("redirect:/recebedor/listar");
 		return mv;
 	}
 	
