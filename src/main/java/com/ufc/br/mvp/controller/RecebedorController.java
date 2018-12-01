@@ -35,7 +35,7 @@ public class RecebedorController {
 	}
 	
 	@RequestMapping("/atualizar/{id}")
-	public ModelAndView atualizar(@PathVariable Long id) {
+	public ModelAndView atualizar(@PathVariable Integer id) {
 		Recebedor recebedor = service.find(id);
 		ModelAndView mv = new ModelAndView("recebedor");
 		mv.addObject("recebedor", recebedor);
@@ -54,7 +54,7 @@ public class RecebedorController {
 	}
 	
 	@RequestMapping("/excluir/{id}")
-	public ModelAndView excluirUsuario(@PathVariable Long id) {
+	public ModelAndView excluirUsuario(@PathVariable Integer id) {
 		service.delete(id);
 		ModelAndView mv = new ModelAndView("redirect:/recebedor/listar");
 		return mv;
