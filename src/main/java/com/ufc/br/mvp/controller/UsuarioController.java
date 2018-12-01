@@ -2,9 +2,14 @@ package com.ufc.br.mvp.controller;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.List;
 import java.util.logging.Logger;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,10 +17,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ufc.br.mvp.bean.Conta;
 import com.ufc.br.mvp.bean.Usuario;
 import com.ufc.br.mvp.service.UsuarioService;
 
 @Controller
+@Transactional
 @RequestMapping("/usuario")
 public class UsuarioController {
 	
@@ -33,10 +40,19 @@ public class UsuarioController {
 	}
 	
 	@RequestMapping("/contas")
-	public ModelAndView getMyContas(Usuario user) {
-		//Pegar o usuario da sessão
+	public ModelAndView getMyContas() {
+		
+		//Usuario logado na sessão
+		Object auth = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails user = (UserDetails) auth;
+				
+		Usuario usuario = service.buscaPorLogin(user.getUsername());
+		List<Conta> contas = usuario.getContas();
+		
 		ModelAndView mv = new ModelAndView("contas");
-		mv.addObject("contas", user.getContas());
+		//if (usuario != null) {
+			mv.addObject("contas", contas);
+		//}
 		return mv;
 	}
 	
@@ -62,7 +78,7 @@ public class UsuarioController {
 		}
 		
 		service.save(usuario);
-		ModelAndView mv = new ModelAndView("redirect:/");
+		ModelAndView mv = new ModelAndView("redirect:/login");
 		return mv;
 	}
 }

@@ -9,6 +9,8 @@ import java.util.logging.Logger;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +20,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ufc.br.mvp.bean.Conta;
 import com.ufc.br.mvp.bean.Recebedor;
+import com.ufc.br.mvp.bean.Usuario;
 import com.ufc.br.mvp.service.ContaService;
 import com.ufc.br.mvp.service.RecebedorService;
+import com.ufc.br.mvp.service.UsuarioService;
 
 @Controller
 @Transactional
@@ -30,6 +34,8 @@ public class ContaController {
 	private ContaService service;
 	@Autowired
 	private RecebedorService recebedorService;
+	@Autowired
+	private UsuarioService usuarioService;
 	
 	private static final Logger logger = Logger.getLogger(String.valueOf(ContaController.class));
 	
@@ -48,6 +54,12 @@ public class ContaController {
 							@RequestParam String vencimento, @RequestParam String pagamento,
 							@RequestParam Integer idRecebedor) {
 		
+		//Usuario logado na sessão
+		Object auth = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		UserDetails user = (UserDetails) auth;
+				
+		Usuario usuario = usuarioService.buscaPorLogin(user.getUsername());
+		
 		Conta conta = new Conta();
 		Recebedor recebedor = recebedorService.find(idRecebedor);
 		LocalDate dataVencimento;
@@ -55,6 +67,9 @@ public class ContaController {
 		
 		conta.setDescricao(descricao);
 		conta.setValor(valor);
+		if (usuario != null) {
+			conta.setUsuario(usuario);
+		}
 		if (recebedor != null) {
 			conta.setRecebedor(recebedor);
 		}
@@ -76,6 +91,7 @@ public class ContaController {
 	public ModelAndView atualizar(@PathVariable Long id) {
 		Conta conta = service.find(id);
 		ModelAndView mv = new ModelAndView("conta");
+		mv.addObject("recebedores", recebedorService.findAll());
 		mv.addObject("conta", conta);
 		return mv;
 	}

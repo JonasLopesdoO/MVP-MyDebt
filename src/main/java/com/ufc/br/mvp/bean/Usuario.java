@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -43,7 +44,7 @@ public class Usuario implements UserDetails{
 	
 	
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.EAGER)
 	private List<Conta> contas;
 	
 	public Usuario() {}
@@ -54,7 +55,7 @@ public class Usuario implements UserDetails{
 		this.nascimento = nascimento;
 		this.login = login;
 		this.senha = senha;
-		this.contas = new ArrayList<Conta>();
+		this.contas = new ArrayList<>();
 	}
 	
 	public Long getId() {
