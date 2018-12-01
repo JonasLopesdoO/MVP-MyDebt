@@ -15,6 +15,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,11 +27,12 @@ public class Usuario implements UserDetails{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="usuario_id")
 	private Long id;
-	
+	@NotNull @NotEmpty
 	private String nome;
-	private String sobrenome;
 	private LocalDate nascimento;
-	private String email;
+	@NotNull @NotEmpty
+	private String login;
+	@NotNull @NotEmpty
 	private String senha;
 	
 	@ManyToMany
@@ -38,25 +41,18 @@ public class Usuario implements UserDetails{
 			inverseJoinColumns = @JoinColumn (name = "role_id", referencedColumnName = "role"))
 	private List<Role> roles;
 	
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
-	}
+	
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
 	private List<Conta> contas;
 	
 	public Usuario() {}
 	
-	public Usuario(String nome, String sobrenome, LocalDate nascimento, 
-					String email, String senha) {
+	public Usuario(String nome, LocalDate nascimento, 
+					String login, String senha) {
 		this.nome = nome;
-		this.sobrenome = sobrenome;
 		this.nascimento = nascimento;
-		this.email = email;
+		this.login = login;
 		this.senha = senha;
 		this.contas = new ArrayList<Conta>();
 	}
@@ -73,23 +69,18 @@ public class Usuario implements UserDetails{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getSobrenome() {
-		return sobrenome;
-	}
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
-	}
+	
 	public LocalDate getNascimento() {
 		return nascimento;
 	}
 	public void setNascimento(LocalDate nascimento) {
 		this.nascimento = nascimento;
 	}
-	public String getEmail() {
-		return email;
+	public String getLogin() {
+		return login;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 	public String getSenha() {
 		return senha;
@@ -106,6 +97,14 @@ public class Usuario implements UserDetails{
 		this.contas = contas;
 	}
 
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}	
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return this.roles;
@@ -118,7 +117,7 @@ public class Usuario implements UserDetails{
 
 	@Override
 	public String getUsername() {
-		return this.email;
+		return this.login;
 	}
 
 	@Override
