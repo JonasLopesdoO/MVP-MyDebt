@@ -1,6 +1,9 @@
 package com.ufc.br.mvp.security;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -10,6 +13,7 @@ import com.ufc.br.mvp.bean.Usuario;
 import com.ufc.br.mvp.repository.UsuarioRepository;
 
 @Repository
+@Transactional
 public class ImplementsUserDetailsService implements UserDetailsService{
 
 	@Autowired
@@ -21,7 +25,7 @@ public class ImplementsUserDetailsService implements UserDetailsService{
 		if (user == null) {
 			throw new UsernameNotFoundException("Usuário não encontrado");
 		}
-		return user;
+		return new User(user.getUsername(), user.getPassword(), true, true, true, true, user.getAuthorities());
 	}
 
 }

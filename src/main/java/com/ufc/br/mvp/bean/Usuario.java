@@ -11,6 +11,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -28,6 +31,21 @@ public class Usuario implements UserDetails{
 	private LocalDate nascimento;
 	private String email;
 	private String senha;
+	
+	@ManyToMany
+	@JoinTable(name="usuarios_roles", joinColumns =  
+			@JoinColumn( name = "usuario_id", referencedColumnName = "usuario_id"),
+			inverseJoinColumns = @JoinColumn (name = "role_id", referencedColumnName = "role"))
+	private List<Role> roles;
+	
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
 	private List<Conta> contas;
 	
@@ -90,7 +108,7 @@ public class Usuario implements UserDetails{
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return null;
+		return this.roles;
 	}
 
 	@Override
