@@ -33,15 +33,15 @@
 	          			<label for="pagamento">Pagamento</label>
 	        		</div>
 	      			<div class="col s4">
-		      			<label>Browser Select</label>
+		      			<label>Recebdor</label>
 						<select class="browser-default" id="idRecebedor" name="idRecebedor">
-							<option value="" disabled selected>Choose your option</option>
+							<option value="" disabled selected>Escolha um recebedor</option>
 		      				<option th:each="recebedor : ${recebedores}" th:value="${recebedor.id}" th:text="${recebedor.nome}"></option>
 						</select>
 	      			</div>
 	      		</div>
 	      		
-	      		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+	      		<button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
     				<i class="material-icons right">send</i>
   				</button>
 	        </form>
