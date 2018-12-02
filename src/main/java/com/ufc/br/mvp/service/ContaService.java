@@ -1,5 +1,8 @@
 package com.ufc.br.mvp.service;
 
+import java.util.Collection;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +29,9 @@ public class ContaService {
 	
 	public Conta find(Long id) {
 		return repository.getOne(id);
+	}
+
+	public List<Conta> findAll() {
+		return repository.findAll();
 	}
 }
