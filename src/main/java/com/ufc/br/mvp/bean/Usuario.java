@@ -32,7 +32,7 @@ public class Usuario implements UserDetails{
 	private String nome;
 	private LocalDate nascimento;
 	@NotNull @NotEmpty
-	private String login;
+	private String email;
 	@NotNull @NotEmpty
 	private String senha;
 	
@@ -50,10 +50,10 @@ public class Usuario implements UserDetails{
 	public Usuario() {}
 	
 	public Usuario(String nome, LocalDate nascimento, 
-					String login, String senha) {
+					String email, String senha) {
 		this.nome = nome;
 		this.nascimento = nascimento;
-		this.login = login;
+		this.email = email;
 		this.senha = senha;
 		this.contas = new ArrayList<>();
 	}
@@ -77,15 +77,11 @@ public class Usuario implements UserDetails{
 	public void setNascimento(LocalDate nascimento) {
 		this.nascimento = nascimento;
 	}
-	public String getLogin() {
-		return login;
-	}
-	public void setLogin(String login) {
-		this.login = login;
-	}
-	
 	public String getEmail() {
-		return this.getE
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public String getSenha() {
@@ -123,7 +119,7 @@ public class Usuario implements UserDetails{
 
 	@Override
 	public String getUsername() {
-		return this.login;
+		return this.email;
 	}
 
 	@Override

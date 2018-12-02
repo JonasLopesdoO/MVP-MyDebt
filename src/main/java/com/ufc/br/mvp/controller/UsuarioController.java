@@ -51,7 +51,7 @@ public class UsuarioController {
 		Object auth = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		UserDetails user = (UserDetails) auth;
 				
-		Usuario usuario = service.buscaPorLogin(user.getUsername());
+		Usuario usuario = service.buscaPorEmail(user.getUsername());
 		List<Conta> contas = usuario.getContas();
 		
 		ModelAndView mv = new ModelAndView("contas");
@@ -63,7 +63,7 @@ public class UsuarioController {
 	
 	@PostMapping("/salvar")
 	public ModelAndView salvar(@RequestParam String nome, @RequestParam String nascimento,
-							@RequestParam String login, @RequestParam String senha) {
+							@RequestParam String email, @RequestParam String senha) {
 		
 		Usuario usuario = new Usuario();
 		Role role = roleService.find("ROLE_USER");
@@ -72,7 +72,7 @@ public class UsuarioController {
 		String cripitografia = new BCryptPasswordEncoder().encode(senha);
 		
 		usuario.setNome(nome);
-		usuario.setLogin(login);
+		usuario.setEmail(email);
 		usuario.setSenha(cripitografia);
 		usuario.getRoles().add(role);
 		try {

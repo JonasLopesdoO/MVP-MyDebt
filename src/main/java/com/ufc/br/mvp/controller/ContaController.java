@@ -58,7 +58,7 @@ public class ContaController {
 		Object auth = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		UserDetails user = (UserDetails) auth;
 				
-		Usuario usuario = usuarioService.buscaPorLogin(user.getUsername());
+		Usuario usuario = usuarioService.buscaPorEmail(user.getUsername());
 		
 		Conta conta = new Conta();
 		Recebedor recebedor = recebedorService.find(idRecebedor);

@@ -7,5 +7,6 @@ import com.ufc.br.mvp.bean.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
-	public Usuario findByLogin(String login);
+	
+	public Usuario findByEmail(String username);
 }

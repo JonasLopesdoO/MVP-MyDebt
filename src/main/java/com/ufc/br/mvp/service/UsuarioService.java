@@ -19,8 +19,8 @@ public class UsuarioService {
 	public Usuario find(Long id) {
 		return repository.getOne(id);
 	}
-
-	public Usuario buscaPorLogin(String username) {
-		return repository.findByLogin(username);
+	
+	public Usuario buscaPorEmail(String username) {
+		return repository.findByEmail(username);
 	}
 }
