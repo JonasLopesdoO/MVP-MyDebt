@@ -4,6 +4,10 @@
     <list default="true" id="c05ef11a-9082-4419-95ba-0a82f29a5955" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVP MyDebt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MVP MyDebt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/css/materialize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/css/materialize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.min.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,16 +22,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/MvpApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#296#297#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>materialize</find>
+      <find>materialize.css</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Jonas Lopes\Documents\GitHub\MVP-MyDebt</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +58,17 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="mvp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="410" />
     <option name="y" value="360" />
@@ -55,60 +76,10 @@
     <option name="height" value="780" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVP-MyDebt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVP-MyDebt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -196,6 +167,48 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+              <item name="materialize" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+              <item name="materialize" type="1f31426a:PackageElementNode" />
+              <item name="css" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+              <item name="materialize" type="1f31426a:PackageElementNode" />
+              <item name="js" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="templates" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,8 +219,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543179703997" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SACCS" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543760106610" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -266,11 +279,13 @@
       <workItem from="1542657606869" duration="157000" />
       <workItem from="1543177198610" duration="810000" />
       <workItem from="1543179033085" duration="755000" />
+      <workItem from="1543676842410" duration="2806000" />
+      <workItem from="1543758197421" duration="1827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3031000" />
+    <option name="totallyTimeSpent" value="7664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,8 +298,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18322147" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -293,8 +309,6 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Captures" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" visible="true" weight="0.5694051" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731544" weight="0.21985815" />
@@ -302,7 +316,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4966443" weight="0.26203966" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19932885" side_tool="true" weight="0.364539" />
@@ -312,7 +326,8 @@
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4986577" weight="0.32907802" />
       <window_info anchor="bottom" id="Spring" order="15" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3286119" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" visible="true" weight="0.5750708" />
       <window_info active="true" anchor="right" id="Remote Host" order="0" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -326,6 +341,7 @@
       <window_info anchor="right" id="Device File Explorer" order="10" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" id="Preview" order="11" weight="0.2637584" />
       <window_info anchor="right" id="Bean Validation" order="12" />
+      <window_info anchor="right" id="Maven" order="13" weight="0.3295302" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,26 +360,13 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pessoa-formulario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pessoa-formulario.html" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.0.RELEASE/spring-boot-autoconfigure-2.1.0.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -371,13 +374,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/materialize/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="40" selection-end-line="90" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/MvpApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#296#297#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
