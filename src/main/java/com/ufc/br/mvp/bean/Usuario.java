@@ -47,7 +47,10 @@ public class Usuario implements UserDetails{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.EAGER)
 	private List<Conta> contas;
 	
-	public Usuario() {}
+	public Usuario() {
+		this.contas = new ArrayList<>();
+		this.roles = new ArrayList<>();
+	}
 	
 	public Usuario(String nome, LocalDate nascimento, 
 					String email, String senha) {
@@ -56,6 +59,7 @@ public class Usuario implements UserDetails{
 		this.email = email;
 		this.senha = senha;
 		this.contas = new ArrayList<>();
+		this.roles = new ArrayList<>();
 	}
 	
 	public Long getId() {
