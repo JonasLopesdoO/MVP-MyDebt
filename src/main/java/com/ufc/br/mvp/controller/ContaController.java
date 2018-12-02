@@ -51,7 +51,7 @@ public class ContaController {
 	
 	@PostMapping(path = "/salvar")
 	public ModelAndView salvar(@RequestParam String descricao, @RequestParam double valor,
-							@RequestParam String vencimento, @RequestParam String pagamento,
+							@RequestParam String vencimento, @RequestParam String notificacao,
 							@RequestParam Integer idRecebedor) {
 		
 		//Usuario logado na sessão
@@ -63,7 +63,7 @@ public class ContaController {
 		Conta conta = new Conta();
 		Recebedor recebedor = recebedorService.find(idRecebedor);
 		LocalDate dataVencimento;
-		LocalDate dataPagamento;
+		LocalDate dataNotificacao;
 		
 		conta.setDescricao(descricao);
 		conta.setValor(valor);
@@ -75,9 +75,9 @@ public class ContaController {
 		}
 		try {
 			dataVencimento = LocalDate.parse(vencimento);
-			dataPagamento = LocalDate.parse(pagamento);
+			dataNotificacao = LocalDate.parse(notificacao);
 			conta.setVencimento(dataVencimento);
-			conta.setPagamento(dataPagamento);
+			conta.setNotificacao(dataNotificacao);
 		} catch (DateTimeParseException e) {
 			logger.warning("Data no formato invalido");
 		}
