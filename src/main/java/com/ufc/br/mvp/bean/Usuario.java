@@ -82,6 +82,11 @@ public class Usuario implements UserDetails{
 	public void setLogin(String login) {
 		this.login = login;
 	}
+	
+	public String getEmail() {
+		return this.getE
+	}
+	
 	public String getSenha() {
 		return senha;
 	}
