@@ -1,8 +1,6 @@
 package com.ufc.br.mvp.service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.mail.internet.MimeMessage;
 
@@ -21,12 +19,10 @@ public class SimpleEmailService {
     @Autowired
     private ContaService contaService;
     
-    @SuppressWarnings("unused")
 	public void sendEmail() throws Exception{
         MimeMessage message = sender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
         
-        List<Conta> contas = new ArrayList<Conta>();
    	 	LocalDate today = LocalDate.now();
    	 	for (Conta conta : contaService.findAll()) {
 			

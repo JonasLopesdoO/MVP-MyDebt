@@ -11,6 +11,17 @@
     <name>mvp</name>
     <description>Demo project for Spring Boot</description>
 
+	<repositories>
+		<repository>
+   			<id>jrimum.org</id>
+   			<url>http://jrimum.org/maven/content/groups/public/</url>
+   			<snapshots>
+      			<enabled>true</enabled>
+   			</snapshots>
+		</repository>
+	</repositories>
+	
+	
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -79,6 +90,13 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+        
+        <dependency>
+		   <groupId>org.jrimum</groupId>
+		   <artifactId>jrimum-bopepo</artifactId>
+		   <version>0.2.3-SNAPSHOT</version><!-- 0.2.3-DEV-SNAPSHOT em desenvolvimento -->
+		</dependency>
+		
         <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
 		<dependency>
 		    <groupId>javax.mail</groupId>
