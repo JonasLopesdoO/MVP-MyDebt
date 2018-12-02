@@ -30,7 +30,7 @@ public class SimpleEmailService {
    	 	LocalDate today = LocalDate.now();
    	 	for (Conta conta : contaService.findAll()) {
 			
-   	 		if (conta.getPagamento().isEqual(today)) {
+   	 		if (conta.getNotificacao().isEqual(today)) {
 				helper.setTo(conta.getUsuario().getEmail());
 	            helper.setText(getText(conta));
 	            helper.setSubject("Notificação");
@@ -42,8 +42,8 @@ public class SimpleEmailService {
 	}
     
     public String getText(Conta conta) {
-    	return "A data para seu pagamento, referente a conta: "+ conta.getDescricao() + 
-    			" chegou, verifique suas contas no site";
+    	return "A data de alerta para o pagamento da conta que você nos avisou chegou. \nA conta é esta: "+ conta.getDescricao() +
+    			" \n Esperamos que dê tudo certo no seu pagamento, tenha um ótimo dia :D";
     }
     
 }

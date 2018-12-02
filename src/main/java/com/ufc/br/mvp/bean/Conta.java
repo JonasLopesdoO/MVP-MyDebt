@@ -30,19 +30,19 @@ public class Conta {
 	@JoinColumn(name = "recebedor_id")
 	private Recebedor recebedor;
 	private LocalDate vencimento;
-	private LocalDate pagamento;
+	private LocalDate notificacao;
 	
 	public Conta() {}
 	
 	public Conta(String descricao, double valor, Boleto boleto, Usuario usuario,
-					Recebedor recebedor, LocalDate vencimento, LocalDate pagamento) {
+					Recebedor recebedor, LocalDate vencimento, LocalDate notificacao) {
 		this.descricao = descricao;
 		this.valor = valor;
 		this.boleto = boleto;
 		this.usuario = usuario;
 		this.recebedor = recebedor;
 		this.vencimento = vencimento;
-		this.pagamento = pagamento;
+		this.notificacao = notificacao;
 	}
 	
 	public Long getId() {
@@ -87,11 +87,11 @@ public class Conta {
 	public void setVencimento(LocalDate vencimento) {
 		this.vencimento = vencimento;
 	}
-	public LocalDate getPagamento() {
-		return pagamento;
+	public LocalDate getNotificacao() {
+		return notificacao;
 	}
-	public void setPagamento(LocalDate pagamento) {
-		this.pagamento = pagamento;
+	public void setNotificacao(LocalDate notificacao) {
+		this.notificacao = notificacao;
 	}
 	
 }
