@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ufc.br.mvp.bean.Conta;
+import com.ufc.br.mvp.bean.Role;
 import com.ufc.br.mvp.bean.Usuario;
+import com.ufc.br.mvp.service.RoleService;
 import com.ufc.br.mvp.service.UsuarioService;
 
 @Controller
@@ -28,6 +30,9 @@ public class UsuarioController {
 	
 	@Autowired
 	private UsuarioService service;
+	
+	@Autowired
+	private RoleService roleService;
 	
 	private static final Logger logger = Logger.getLogger(String.valueOf(UsuarioController.class));
 	
@@ -61,6 +66,7 @@ public class UsuarioController {
 							@RequestParam String login, @RequestParam String senha) {
 		
 		Usuario usuario = new Usuario();
+		Role role = roleService.find("ROLE_USER");
 		
 		LocalDate dataNascimento;		
 		String cripitografia = new BCryptPasswordEncoder().encode(senha);
@@ -68,7 +74,7 @@ public class UsuarioController {
 		usuario.setNome(nome);
 		usuario.setLogin(login);
 		usuario.setSenha(cripitografia);
-		
+		usuario.getRoles().add(role);
 		try {
 			dataNascimento = LocalDate.parse(nascimento);
 			usuario.setNascimento(dataNascimento);
