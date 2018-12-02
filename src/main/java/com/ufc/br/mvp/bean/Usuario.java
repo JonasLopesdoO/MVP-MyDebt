@@ -22,6 +22,7 @@ import javax.validation.constraints.NotNull;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+@SuppressWarnings("serial")
 @Entity
 public class Usuario implements UserDetails{
 	@Id

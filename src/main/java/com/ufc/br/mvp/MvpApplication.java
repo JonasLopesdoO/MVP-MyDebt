@@ -9,6 +9,6 @@ public class MvpApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MvpApplication.class, args);
-		System.out.println(new BCryptPasswordEncoder().encode("123"));
+		System.out.println(new BCryptPasswordEncoder().encode("mydebt2018"));
 	}
 }

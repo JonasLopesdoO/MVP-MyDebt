@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ufc.br.mvp.bean.Conta;
 import com.ufc.br.mvp.bean.Recebedor;
 import com.ufc.br.mvp.bean.Usuario;
-import com.ufc.br.mvp.mailService.RotinaDeNotificacao;
 import com.ufc.br.mvp.service.ContaService;
 import com.ufc.br.mvp.service.RecebedorService;
 import com.ufc.br.mvp.service.UsuarioService;

@@ -23,9 +23,10 @@
 	        		</div>
 	      		</div>
 	      		<div class="row">
-	        		<div class="input-field col s6">
-	          			<input id="email" type="email" class="validate" th:field="*{email}">
-	          			<label for="email">Email</label>
+	        		<div class="input-field col s6">	
+			            <input id="email_inline" type="email" class="validate" th:field="*{email}">
+			            <label for="email_inline">Email</label>
+			            <span class="helper-text" data-error="E-mail no formato errado" data-success="correto">Texto de ajuda</span>
 	        		</div>
 	        		<div class="input-field col s6">
 	          			<input id="senha" type="password" class="validate" th:field="*{senha}">

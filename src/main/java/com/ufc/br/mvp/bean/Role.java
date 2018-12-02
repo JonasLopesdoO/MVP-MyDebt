@@ -8,6 +8,7 @@ import javax.persistence.ManyToMany;
 
 import org.springframework.security.core.GrantedAuthority;
 
+@SuppressWarnings("serial")
 @Entity
 public class Role implements GrantedAuthority{
 

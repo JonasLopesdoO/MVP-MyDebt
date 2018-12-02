@@ -3,8 +3,6 @@ package com.ufc.br.mvp.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ufc.br.mvp.mailService.RotinaDeNotificacao;
-
 @Controller
 public class PrincipalController {
 	
