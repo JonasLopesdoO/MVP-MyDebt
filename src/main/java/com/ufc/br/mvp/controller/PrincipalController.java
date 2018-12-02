@@ -7,10 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PrincipalController {
 	
 	@RequestMapping(path= "/")
-	public String pagina() {
+	public String index() {
 		return "index";
 	}
 	
+	@RequestMapping(path= "/login")
+	public String pagina() {
+		return index();
+	}
 	
 	@RequestMapping(path= "/contas-lista")
 	public String paginaInicial() {

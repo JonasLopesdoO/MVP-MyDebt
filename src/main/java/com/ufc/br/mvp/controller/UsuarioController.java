@@ -87,4 +87,5 @@ public class UsuarioController {
 		ModelAndView mv = new ModelAndView("redirect:/login");
 		return mv;
 	}
+	
 }
