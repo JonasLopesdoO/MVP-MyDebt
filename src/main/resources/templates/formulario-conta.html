@@ -1,0 +1,60 @@
+<html xmlns:th="http//thymeleaf.org"
+	  xmlns:layout="http//www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Nova Conta</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>	
+	<div class="container">
+		<h2>Cadastro</h2>
+		<h3><a href="/usuario/contas" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>listar Contas</a></h3>
+		
+		<div class="row">
+	    	<form class="col s12" method="POST" action="/conta/atualizar" enctype="multipart/form-data" th:object="${conta}">
+	      		<input type="hidden" th:field="*{id}">
+	      		<div class="row">
+	        		<div class="input-field col s12">
+	          			<input id="descricao" type="text" class="text" th:field="*{descricao}">
+	          			<label for="descricao">Descricao</label>
+	        		</div>
+	      		</div>
+	      		<div class="row">
+	        		<div class="input-field col s2">
+	          			<input placeholder="valor" id="valor" type="number" class="validate" th:field="*{valor}">
+	          			<label for="valor">Valor</label>
+	        		</div>
+	        		<div class="input-field col s3">
+	          			<input id="vencimento" type="date" class="validate" th:field="*{vencimento}">
+	          			<label for="vencimento">Vencimento</label>
+	        		</div>
+	        		<div class="input-field col s3">
+	          			<input id="notificacao" type="date" class="validate" th:field="*{notificacao}">
+	          			<label for="notificacao">Que dia você quer ser avisado? </label>
+	        		</div>
+	      			<div class="col s4">
+		      			<label>Recebdor</label>
+						<select class="browser-default" id="idRecebedor" name="idRecebedor">
+							<option value="" disabled selected>Escolha um recebedor</option>
+		      				<option th:each="recebedor : ${recebedores}" th:value="${recebedor.id}" th:text="${recebedor.nome}"></option>
+						</select>
+	      			</div>
+	      		</div>
+	      		
+	      		<button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
+    				<i class="material-icons right">send</i>
+  				</button>
+	        </form>
+	        <!--  
+	        <div class="input-field col s12">
+			    <select id="recebedor" name="recebedor">
+			      </select>
+			</div>
+			-->
+		</div>
+	</div>
+	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+  	<script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+</body>
+</html>

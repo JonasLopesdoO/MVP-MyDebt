@@ -2,6 +2,8 @@ package com.ufc.br.mvp.controller;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ import com.ufc.br.mvp.bean.Recebedor;
 import com.ufc.br.mvp.service.RecebedorService;
 
 @Controller
+@Transactional
 @RequestMapping("/recebedor")
 public class RecebedorController {
 	
@@ -35,7 +38,7 @@ public class RecebedorController {
 	}
 	
 	@RequestMapping("/atualizar/{id}")
-	public ModelAndView atualizar(@PathVariable Integer id) {
+	public ModelAndView atualizar(@PathVariable int id) {
 		Recebedor recebedor = service.find(id);
 		ModelAndView mv = new ModelAndView("recebedor");
 		mv.addObject("recebedor", recebedor);
@@ -54,9 +57,8 @@ public class RecebedorController {
 	}
 	
 	@RequestMapping("/excluir/{id}")
-	public ModelAndView excluirUsuario(@PathVariable Integer id) {
+	public String excluir(@PathVariable int id) {
 		service.delete(id);
-		ModelAndView mv = new ModelAndView("redirect:/recebedor/listar");
-		return mv;
+		return "redirect:/recebedor/listar";
 	}
 }

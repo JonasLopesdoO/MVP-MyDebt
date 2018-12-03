@@ -17,7 +17,7 @@ public class Recebedor {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="recebedor_id")
-	private Integer id;
+	private int id;
 	
 	private String nome;
 	private String descricao;
@@ -37,7 +37,7 @@ public class Recebedor {
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNome() {

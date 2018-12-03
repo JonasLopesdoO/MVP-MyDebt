@@ -45,7 +45,7 @@ public class Usuario implements UserDetails{
 	
 	
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.LAZY)
 	private List<Conta> contas;
 	
 	public Usuario() {

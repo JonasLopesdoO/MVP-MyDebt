@@ -19,7 +19,7 @@ public class BoletoController {
 	private ContaService contaService;
 	
 	@PostMapping("/gerar")
-	public void geraBoleto(@PathVariable long id) {
+	public void geraBoleto(@PathVariable int id) {
 		
 		ModelAndView mv = new ModelAndView("boleto");
 		Conta conta = contaService.find(id);

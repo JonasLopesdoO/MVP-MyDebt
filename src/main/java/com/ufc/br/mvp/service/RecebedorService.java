@@ -18,15 +18,11 @@ public class RecebedorService {
 		return repository.save(recebedor);
 	}
 	
-	public void delete(Integer id) {
-		try {
-			repository.deleteById(id);
-		} catch (IllegalArgumentException e) {
-			//acao para id nulo
-		}
+	public void delete(int id) {
+		repository.deleteById(id);
 	}
 	
-	public Recebedor find(Integer id) {
+	public Recebedor find(int id) {
 		return repository.getOne(id);
 	}
 	

@@ -87,19 +87,48 @@ public class ContaController {
 		return mv;
 	}
 	
-	@RequestMapping("/atualizar/{id}")
-	public ModelAndView atualizar(@PathVariable Long id) {
+	@PostMapping(path = "/atualizar")
+	public ModelAndView atualiza(@RequestParam int id, @RequestParam String descricao, @RequestParam double valor,
+							@RequestParam String vencimento, @RequestParam String notificacao,
+							@RequestParam Integer idRecebedor) {
+		
 		Conta conta = service.find(id);
-		ModelAndView mv = new ModelAndView("conta");
+		Recebedor recebedor = recebedorService.find(idRecebedor);
+		LocalDate dataVencimento;
+		LocalDate dataNotificacao;
+		
+		conta.setDescricao(descricao);
+		conta.setValor(valor);
+		if (recebedor != null) {
+			conta.setRecebedor(recebedor);
+		}
+		try {
+			dataVencimento = LocalDate.parse(vencimento);
+			dataNotificacao = LocalDate.parse(notificacao);
+			conta.setVencimento(dataVencimento);
+			conta.setNotificacao(dataNotificacao);
+		} catch (DateTimeParseException e) {
+			logger.warning("Data no formato invalido");
+		}
+		
+		service.save(conta);
+		ModelAndView mv = new ModelAndView("redirect:/usuario/contas");
+		return mv;
+	}
+	
+	@RequestMapping("/atualizar/{id}")
+	public ModelAndView atualizar(@PathVariable int id) {
+		Conta conta = service.find(id);
+		ModelAndView mv = new ModelAndView("formulario-conta");
 		mv.addObject("recebedores", recebedorService.findAll());
 		mv.addObject("conta", conta);
 		return mv;
 	}
 	
 	@RequestMapping("/excluir/{id}")
-	public ModelAndView excluirUsuario(@PathVariable Long id) {
-		service.delete(id);
-		ModelAndView mv = new ModelAndView("contas");
-		return mv;
+	public String excluirConta(@PathVariable Integer id) {
+		service.deleteConta(id);
+		return "redirect:/usuario/contas";
 	}
+	
 }

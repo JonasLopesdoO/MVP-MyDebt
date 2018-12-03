@@ -14,20 +14,15 @@ public class ContaService {
 	@Autowired
 	private ContaRepository repository;
 	
-	
 	public Conta save(Conta conta) {
 		return repository.save(conta);
 	}
 	
-	public void delete(Long id) {
-		try {
-			repository.deleteById(id);
-		} catch (IllegalArgumentException e) {
-			// Caso conta nula
-		}
+	public void deleteConta(int id) {	
+		repository.deleteById(id);
 	}
 	
-	public Conta find(Long id) {
+	public Conta find(int id) {
 		return repository.getOne(id);
 	}
 

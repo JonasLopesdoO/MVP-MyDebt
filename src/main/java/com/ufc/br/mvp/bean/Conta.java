@@ -17,11 +17,11 @@ public class Conta {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	private int id;
 	private String descricao;
 	private double valor;
 	@OneToOne(mappedBy="conta", cascade = CascadeType.ALL, 
-					fetch = FetchType.LAZY, optional = false)
+					fetch = FetchType.LAZY)
 	private Boleto boleto;
 	@ManyToOne
 	@JoinColumn(name = "usuario_id")
@@ -45,10 +45,10 @@ public class Conta {
 		this.notificacao = notificacao;
 	}
 	
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getDescricao() {
