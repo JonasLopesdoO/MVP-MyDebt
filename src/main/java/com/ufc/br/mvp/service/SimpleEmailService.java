@@ -39,6 +39,7 @@ public class SimpleEmailService {
     
     public String getText(Conta conta) {
     	return "A data de alerta para o pagamento da conta que você nos avisou chegou. \nA conta é esta: "+ conta.getDescricao() +
+				", valor: " + conta.getValor() +
     			" \n Esperamos que dê tudo certo no seu pagamento, tenha um ótimo dia :D";
     }
     
