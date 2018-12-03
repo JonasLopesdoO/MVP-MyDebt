@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c05ef11a-9082-4419-95ba-0a82f29a5955" name="Default Changelist" comment="Mais arquivos desnecessários apagados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/bean/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/bean/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/controller/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/controller/ContaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/service/SimpleEmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/service/SimpleEmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/conta.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/conta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVP MyDebt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MVP MyDebt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/css/materialize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/css/materialize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,26 +21,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/controller/ContaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="68" column="30" lean-forward="true" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/bean/Conta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+            <state relative-caret-position="765">
+              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/bean/Conta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/materialize/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="391">
+                <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conta.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-390">
-              <caret line="13" column="122" selection-start-line="13" selection-start-column="122" selection-end-line="13" selection-end-column="122" />
+            <state relative-caret-position="391">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -50,7 +71,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>materialize</find>
-      <find>materialize.css</find>
       <find>placeholder</find>
       <find>&quot;submit&quot;</find>
       <find>choose</find>
@@ -62,6 +82,8 @@
       <find>bootstra</find>
       <find>pagamento</find>
       <find>lembrado</find>
+      <find>materialize.js</find>
+      <find>materialize.css</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Jonas Lopes\Documents\GitHub\MVP-MyDebt\src\main\resources\static\js</dir>
@@ -202,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -217,20 +240,25 @@
             <path>
               <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
               <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
-              <item name="com.ufc.br.mvp" type="1f31426a:PackageElementNode" />
-              <item name="bean" type="1f31426a:PackageElementNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
               <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
-              <item name="com.ufc.br.mvp" type="1f31426a:PackageElementNode" />
-              <item name="controller" type="1f31426a:PackageElementNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+              <item name="materialize" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
+              <item name="materialize" type="1f31426a:PackageElementNode" />
+              <item name="js" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,7 +269,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543765235203" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543805091483" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -303,6 +331,7 @@
       <workItem from="1543179033085" duration="755000" />
       <workItem from="1543676842410" duration="2806000" />
       <workItem from="1543758197421" duration="5551000" />
+      <workItem from="1543803810232" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="Excluindo arquivos desnecessários&#10;&#10;Usando apenas os .min.js ou .min.css funciona.">
       <created>1543760371792</created>
@@ -329,7 +358,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11388000" />
+    <option name="totallyTimeSpent" value="12624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,9 +371,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -371,7 +399,7 @@
       <window_info anchor="bottom" id="Spring" order="15" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run Dashboard" order="18" visible="true" weight="0.3045326" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" weight="0.3045326" />
       <window_info active="true" anchor="right" id="Remote Host" order="0" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -403,12 +431,8 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pessoa-formulario.html" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.0.RELEASE/spring-boot-autoconfigure-2.1.0.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -424,16 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/materialize/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="40" selection-end-line="90" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recebedor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -441,13 +455,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/javascript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/javascript.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -480,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conta.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="13" column="122" selection-start-line="13" selection-start-column="122" selection-end-line="13" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.1.RELEASE/spring-security-core-5.1.1.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -496,15 +497,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/controller/ContaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="68" column="30" lean-forward="true" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        <state relative-caret-position="765">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ufc/br/mvp/bean/Conta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/materialize/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="391">
+            <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
