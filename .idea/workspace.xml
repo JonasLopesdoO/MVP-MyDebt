@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c05ef11a-9082-4419-95ba-0a82f29a5955" name="Default Changelist" comment="Mais arquivos desnecessários apagados">
+    <list default="true" id="c05ef11a-9082-4419-95ba-0a82f29a5955" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVP MyDebt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MVP MyDebt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/css/materialize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/css/materialize.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/materialize/js/materialize.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="425">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -50,7 +47,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="391">
-                <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+                <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               </first_editor>
               <second_editor />
             </state>
@@ -60,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conta.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="476">
+              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -83,6 +80,7 @@
       <find>pagamento</find>
       <find>lembrado</find>
       <find>materialize.js</find>
+      <find>css</find>
       <find>materialize.css</find>
     </findStrings>
     <dirStrings>
@@ -246,6 +244,12 @@
               <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
               <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
               <item name="static" type="1f31426a:PackageElementNode" />
+              <item name="css" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="mvp" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MVP MyDebt" type="616d4139:PackageViewModuleNode" />
+              <item name="static" type="1f31426a:PackageElementNode" />
               <item name="materialize" type="1f31426a:PackageElementNode" />
             </path>
             <path>
@@ -269,7 +273,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543805091483" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543805498775" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -331,7 +335,7 @@
       <workItem from="1543179033085" duration="755000" />
       <workItem from="1543676842410" duration="2806000" />
       <workItem from="1543758197421" duration="5551000" />
-      <workItem from="1543803810232" duration="1236000" />
+      <workItem from="1543803810232" duration="1651000" />
     </task>
     <task id="LOCAL-00001" summary="Excluindo arquivos desnecessários&#10;&#10;Usando apenas os .min.js ou .min.css funciona.">
       <created>1543760371792</created>
@@ -354,11 +358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543764259275</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Enviando arquivos não utilizados para as profundezas do tártaro">
+      <created>1543805195311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543805195311</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12624000" />
+    <option name="totallyTimeSpent" value="13039000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,7 +434,8 @@
     <MESSAGE value="Excluindo arquivos desnecessários&#10;&#10;Usando apenas os .min.js ou .min.css funciona." />
     <MESSAGE value="Removendo deinstuitivdades nas views" />
     <MESSAGE value="Mais arquivos desnecessários apagados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mais arquivos desnecessários apagados" />
+    <MESSAGE value="Enviando arquivos não utilizados para as profundezas do tártaro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enviando arquivos não utilizados para as profundezas do tártaro" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/controllers/actions.js" />
@@ -511,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="425">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -520,7 +532,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="391">
-            <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+            <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           </first_editor>
           <second_editor />
         </state>
@@ -544,10 +556,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/conta.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="476">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
     </entry>
